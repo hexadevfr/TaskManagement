@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des tâches</title>
+</head>
+<body>
+    <h1>Liste des Tâches </h1>
+    <ul>
+        {% for task in task %}
+            <li> {{ task.title }} - {{ task.finished|yesno:"Terminée,En cours" }}</li>
+        {% empty %}
+            <li>Aucune tâche à afficher </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
