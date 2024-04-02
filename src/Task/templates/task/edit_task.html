@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editer Tâche</title>
+</head>
+<body>
+    <h1>Editer Tâche</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sauvegarder les Modification</button>
+    </form>
+
+</body>
+</html>

@@ -9,6 +9,8 @@
     <ul>
         {% for task in task %}
             <li> {{ task.title }} - {{ task.finished|yesno:"Terminée,En cours" }}</li>
+            <a href="{% url 'edit_task' pk=task.pk %}">Editer</a>
+            <a href="{% url 'delete_task' pk=task.pk %}">Supprimer</a>
         {% empty %}
             <li>Aucune tâche à afficher </li>
         {% endfor %}
